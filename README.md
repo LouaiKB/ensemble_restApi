@@ -1,5 +1,6 @@
 # ensemble_restapi
-REST queries will programmatically obtain seq_regions of homo sapiens RNA-seq data from the ensemble database
+
+### REST queries will programmatically obtain seq_regions of homo sapiens RNA-seq data from the ensemble database
 =======
 # Lumen PHP Framework
 
