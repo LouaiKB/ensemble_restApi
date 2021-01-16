@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ensemble_restapi
 REST queries will programmatically obtain seq_regions of homo sapiens RNA-seq data from the ensemble database
 =======
@@ -26,4 +25,4 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> first commit
+
