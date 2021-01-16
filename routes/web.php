@@ -15,7 +15,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/name', 'RnaSeqController@showSeqRegionByName');
+
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('rnaseq', ['uses' => 'RnaSeqController@showAllRnaSeq']);
     $router->get('rnaseq/{id}', ['uses' => 'RnaSeqController@showOneSeqRegion']);
 });
+
