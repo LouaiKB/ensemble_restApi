@@ -12,20 +12,26 @@ class RnaSeqController extends Controller
     
     public function showAllRnaSeq() 
     {
-        $query = DB::select('SELECT * FROM seq_region LIMIT 100');
+        $query = DB::table('seq_region')->select('*')->limit(100)->get();
         return response()->json($query);
     }
     
     public function showOneSeqRegion($id) 
     {
-        $query = DB::select("SELECT * FROM seq_region WHERE seq_region_id=$id");
+        $query = DB::table('seq_region')
+                ->select('*')
+                ->where('seq_region_id', '=', "$id")
+                ->get();
         return response()->json($query);
     }
 
     public function showSeqRegionByName(Request $request)
     {
         $name = $request->get("name");
-        $query = DB::select("SELECT * FROM seq_region WHERE name=$name");
+        $query = DB::table('seq_region')
+                ->select("*")
+                ->where('name', '=', "$name")
+                ->get(); 
         return response()->json($query);
     }
 
